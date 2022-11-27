@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnify Animation</title>
+    <!-- Magnify -->
+    <link rel="stylesheet" href="/magnify-assets/css/magnify.css">
+</head>
+<style>
+    img{width:100%}
+    .container{width: 95%; margin: auto;}
+    .col-lg-6{margin-bottom: 1rem;}
+    .col-md-4{width: 20rem;}
+    .my-5{margin: 5rem auto;}
+    .m-auto{margin:auto;}
+</style>
+<body>
+    <div class="container my-5">
+        <div class="col-md-4 m-auto">
+            <img src="images/watch.jpg" class="zoom" data-magnify-src="images/watch.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="/magnify-assets/js/jquery.magnify.js"></script>
+    <script>
+    $(document).ready(function() {
+      // Initiate magnification powers
+      $('.zoom').magnify({
+          afterLoad: function() {
+            console.log('Magnification powers activated!');
+          }
+        });
+    });
+    </script>
+</body>
+</html>
